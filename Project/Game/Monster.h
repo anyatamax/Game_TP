@@ -1,5 +1,6 @@
 #pragma once
 #include <random>
+#include <memory>
 
 int RandomNum(int left, int right) {
     std::random_device rd;
@@ -38,9 +39,10 @@ public:
     int GetDamage() const;
     int GetHealth() const;
     int GetGold() const;
-    static Monster* RandomMonsterFactory();
+    static std::unique_ptr<Monster> RandomMonsterFactory();
 
 };
+
 
 Monster::Monster(MonsterID id)
         : name_(monster_type[id].name)
@@ -63,9 +65,9 @@ int Monster::GetGold() const {
     return gold_;
 }
 
-Monster* Monster::RandomMonsterFactory() {
+std::unique_ptr<Monster> Monster::RandomMonsterFactory() {
     int id = RandomNum(0, SIZE);
-    return new Monster(static_cast<MonsterID>(id));
+    return std::make_unique<Monster>(Monster(static_cast<MonsterID>(id)));
 }
 
 Monster::MonsterType Monster::monster_type[Monster::SIZE] {

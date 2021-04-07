@@ -9,12 +9,23 @@ protected:
     int level_;
 public:
     Unit(const char* name, int health, int damage, int gold, int level);
-    virtual const char* GetName() = 0;
-    virtual int GetDamage() = 0;
-    virtual int GetHealth() = 0;
-    virtual int GetGold() = 0;
+    const char* GetName() {
+        return name_;
+    }
+    int GetDamage() const {
+        return damage_;
+    }
+    int GetHealth() const {
+        return health_;
+    }
+    int GetGold() const {
+        return gold_;
+    }
+
+    int GetLevel() const {
+        return level_;
+    }
     virtual const char* GetPrivilege() = 0;
-    virtual int GetLevel() = 0;
     virtual ~Unit() = default;
 };
 
