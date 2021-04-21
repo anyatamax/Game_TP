@@ -78,4 +78,3 @@ Monster::MonsterType Monster::monster_type[Monster::SIZE] {
         {"Zombie", 15, 5, 15},
         {"Bigfoot", 30, 25, 30}
 };
-

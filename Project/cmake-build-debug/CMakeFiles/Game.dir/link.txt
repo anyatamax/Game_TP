@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Game.dir/main.cpp.o CMakeFiles/Game.dir/Game/Unit.cpp.o CMakeFiles/Game.dir/Game/UnitFactory.cpp.o CMakeFiles/Game.dir/Game/Knight.cpp.o CMakeFiles/Game.dir/Game/Human.cpp.o CMakeFiles/Game.dir/Game/Princess.cpp.o CMakeFiles/Game.dir/Game/Magician.cpp.o CMakeFiles/Game.dir/Game/Monster.cpp.o  -o Game 
