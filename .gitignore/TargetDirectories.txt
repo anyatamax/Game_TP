@@ -1,3 +1,0 @@
-/home/any/Game_TP/Game_TP/CMakeFiles/rebuild_cache.dir
-/home/any/Game_TP/Game_TP/CMakeFiles/edit_cache.dir
-/home/any/Game_TP/Game_TP/CMakeFiles/Game.dir
