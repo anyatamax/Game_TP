@@ -21,10 +21,6 @@ public:
     int GetGold() const {
         return gold_;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> edits_checkpoint_1
     int GetLevel() const {
         return level_;
     }
