@@ -1,16 +1,6 @@
 #include <iostream>
 #include <string>
-#include <memory>
-#include <vector>
-#include <random>
-#include <sstream>
-#include "Game/Unit.h"
 #include "Game/UnitFactory.h"
-#include "Game/Knight.h"
-#include "Game/Human.h"
-#include "Game/Magician.h"
-#include "Game/Princess.h"
-#include "Game/Monster.h"
 #include "Game/ComposeUnits.h"
 
 int main() {
