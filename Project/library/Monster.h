@@ -34,7 +34,13 @@ public:
     int GetDamage() const;
     int GetHealth() const;
     int GetGold() const;
-    static std::unique_ptr<Monster> RandomMonsterFactory();
+    bool IdDead() {
+        return health_ <= 0;
+    }
+    void ReduceHealth(int health) {
+        health_ -= health;
+    }
+    static std::shared_ptr<Monster> RandomMonsterFactory();
 
 };
 

@@ -7,7 +7,6 @@ int RandomNum(int left, int right) {
     return dist(mt);
 }
 
-
 Monster::Monster(MonsterID id)
         : name_(monster_type[id].name)
         , health_(monster_type[id].health)
@@ -29,16 +28,16 @@ int Monster::GetGold() const {
     return gold_;
 }
 
-std::unique_ptr<Monster> Monster::RandomMonsterFactory() {
+std::shared_ptr<Monster> Monster::RandomMonsterFactory() {
     int id = RandomNum(0, SIZE);
-    return std::make_unique<Monster>(Monster(static_cast<MonsterID>(id)));
+    return std::make_shared<Monster>(Monster(static_cast<MonsterID>(id)));
 }
 
 Monster::MonsterType Monster::monster_type[Monster::SIZE] {
-        {"Dragon", 10, 10, 10},
-        {"Godzilla", 20, 20, 20},
+        {"Dragon", 5, 5, 10},
+        {"Godzilla", 10, 10, 20},
         {"Vampire", 5, 5, 5},
-        {"Goblin", 5, 10, 5},
+        {"Goblin", 5, 5, 5},
         {"Zombie", 15, 5, 15},
-        {"Bigfoot", 30, 25, 30}
+        {"Bigfoot", 30, 10, 30}
 };

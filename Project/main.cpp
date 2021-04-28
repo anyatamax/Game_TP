@@ -2,6 +2,7 @@
 #include <string>
 #include "UnitFactory.h"
 #include "ComposeUnits.h"
+#include "Fight.h"
 
 int main() {
     UnitFactory person;
@@ -20,7 +21,21 @@ int main() {
         std::cin.ignore(32767, '\n');
         std::getline(std::cin, number);
         ComposeUnits units(number);
-        units.PrintUnits();
+        if (units.units.empty()) {
+            std::cout << "Please, enter the right numbers (For example: 1 2 3 4)\n";
+            std::cin.ignore(32767, '\n');
+            std::getline(std::cin, number);
+            units = ComposeUnits(number);
+        }
+        while (!units.FinishGame()) {
+            Fight(units);
+        }
+        if (units.GetLevel() == 20) {
+            std::cout << "You won a game and get " << units.GetGold() << " gold!!!";
+        } else {
+            std::cout << "You died at the level " << units.GetLevel() << " and with a gold " << units.GetGold() << "(((\n";
+            std::cout << "Don't be upset)))";
+        }
     }
     else {
         std::cout << "See you later!";

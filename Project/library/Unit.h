@@ -14,6 +14,11 @@ public:
     int GetHealth() const;
     int GetGold() const;
     int GetLevel() const;
+    void LevelUp();
+    bool IsDead();
+    void AddGold(int gold);
+    void ReduceHealth(int health);
     virtual const char* GetPrivilege() = 0;
     virtual ~Unit() = default;
 };
+
