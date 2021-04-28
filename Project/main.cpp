@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "Game/UnitFactory.h"
-#include "Game/ComposeUnits.h"
+#include "UnitFactory.h"
+#include "ComposeUnits.h"
 
 int main() {
     UnitFactory person;
