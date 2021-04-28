@@ -15,7 +15,6 @@ void Fight(ComposeUnits &units) {
     std::shared_ptr<Unit> pearson = units.units[number - 1];
     GameCommand* command;
     while (!pearson->IsDead() && !monster->IdDead()) {
-        std::cin.ignore(32767, '\n');
         std::cout << "Do you want Run or Fight? Enter R or F: ";
         char input;
         std::cin >> input;

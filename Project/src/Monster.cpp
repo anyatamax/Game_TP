@@ -34,10 +34,10 @@ std::shared_ptr<Monster> Monster::RandomMonsterFactory() {
 }
 
 Monster::MonsterType Monster::monster_type[Monster::SIZE] {
-        {"Dragon", 5, 5, 10},
-        {"Godzilla", 10, 10, 20},
+        {"Dragon", 10, 5, 10},
+        {"Godzilla", 15, 10, 20},
         {"Vampire", 5, 5, 5},
-        {"Goblin", 5, 5, 5},
+        {"Goblin", 20, 5, 10},
         {"Zombie", 15, 5, 15},
         {"Bigfoot", 30, 10, 30}
 };
