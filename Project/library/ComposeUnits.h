@@ -8,10 +8,11 @@
 #include "UnitFactory.h"
 
 class ComposeUnits {
+private:
+    int gold_all = 0;
+    int level = 0;
 public:
     std::vector<std::shared_ptr<Unit>> units;
-    int level_;
-    int gold_;
     ComposeUnits(const std::string& str);
     void AddUnit(std::shared_ptr<Unit>& person);
     void RemoveUnit(std::shared_ptr<Unit>& person);
