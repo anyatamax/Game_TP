@@ -28,6 +28,14 @@ int Monster::GetGold() const {
     return gold_;
 }
 
+bool Monster::IsDead() {
+    return health_ <= 0;
+}
+
+void Monster::ReduceHealth(int health) {
+    health_ -= health;
+}
+
 std::shared_ptr<Monster> Monster::RandomMonsterFactory() {
     int id = RandomNum(0, SIZE);
     return std::make_shared<Monster>(Monster(static_cast<MonsterID>(id)));

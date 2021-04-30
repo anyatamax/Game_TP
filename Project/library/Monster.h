@@ -34,12 +34,8 @@ public:
     int GetDamage() const;
     int GetHealth() const;
     int GetGold() const;
-    bool IdDead() {
-        return health_ <= 0;
-    }
-    void ReduceHealth(int health) {
-        health_ -= health;
-    }
+    bool IsDead();
+    void ReduceHealth(int health);
     static std::shared_ptr<Monster> RandomMonsterFactory();
 
 };

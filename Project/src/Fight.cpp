@@ -14,7 +14,7 @@ void Fight(ComposeUnits &units) {
     }
     std::shared_ptr<Unit> pearson = units.units[number - 1];
     GameCommand* command;
-    while (!pearson->IsDead() && !monster->IdDead()) {
+    while (!pearson->IsDead() && !monster->IsDead()) {
         std::cout << "Do you want Run or Fight? Enter R or F: ";
         char input;
         std::cin >> input;
@@ -30,8 +30,8 @@ void Fight(ComposeUnits &units) {
     }
     if (pearson->IsDead()) {
         std::cout << "You were killed by " << monster->GetName() << "\n";
-        units.gold_ += pearson->GetGold();
-        units.level_ += pearson->GetLevel();
+        units.SetGold(pearson->GetGold());
+        units.SetLevel(pearson->GetLevel());
         units.RemoveUnit(pearson);
     }
 }

@@ -38,6 +38,15 @@ int ComposeUnits::GetGold() const {
     }
     return  gold + gold_;
 }
+
+void ComposeUnits::SetGold(int gold) {
+    gold_ += gold;
+}
+
+void ComposeUnits::SetLevel(int level) {
+    level_ += level;
+}
+
 int ComposeUnits::GetLevel() const {
     size_t level = 0;
     for (size_t i = 0; i < units.size(); ++i) {

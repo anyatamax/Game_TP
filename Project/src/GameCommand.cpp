@@ -4,7 +4,7 @@ GameCommand::GameCommand(std::shared_ptr<Monster>& monster, std::shared_ptr<Unit
 }
 
 void GameCommand::AttackPlayer() {
-    if (monster_->IdDead()) {
+    if (monster_->IsDead()) {
         return;
     }
     pearson_->ReduceHealth(monster_->GetDamage());
@@ -16,7 +16,7 @@ void GameCommand::AttackMonster() {
     }
     std::cout << "You attack a " << monster_->GetName() << " with a power: " << pearson_->GetDamage() << std::endl;
     monster_->ReduceHealth(pearson_->GetDamage());
-    if (monster_->IdDead()) {
+    if (monster_->IsDead()) {
         std::cout << "You killed a " << monster_->GetName() << std::endl;
         pearson_->LevelUp();
         std::cout << "Now your level is " << pearson_->GetLevel() << " and damage of " << pearson_->GetName() << " is " << pearson_->GetDamage() << std::endl;
