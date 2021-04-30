@@ -1,11 +1,4 @@
-#pragma once
-#include "Unit.h"
-
-class Knight: public Unit {
-public:
-    Knight();
-    const char* GetPrivilege() override;
-};
+#include "Knight.h"
 
 Knight::Knight() : Unit("Knight", 10, 5, 0, 0) {
 }

@@ -1,11 +1,5 @@
-#pragma once
-#include "Unit.h"
+#include "Princess.h"
 
-class Princess: public Unit {
-public:
-    Princess();
-    const char* GetPrivilege() override;
-};
 
 Princess::Princess() : Unit("Princess", 20, 1, 2, 0) {
 }

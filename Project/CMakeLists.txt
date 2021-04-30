@@ -1,9 +1,11 @@
-cmake_minimum_required(VERSION 2.8)
-project(Game)
+cmake_minimum_required(VERSION 3.0)
+project(Game VERSION 1.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Game ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/Game/Unit.cpp ${PROJECT_SOURCE_DIR}/Game/Unit.h
-        ${PROJECT_SOURCE_DIR}/Game/UnitFactory.cpp ${PROJECT_SOURCE_DIR}/Game/UnitFactory.h ${PROJECT_SOURCE_DIR}/Game/Knight.cpp ${PROJECT_SOURCE_DIR}/Game/Knight.h
-        ${PROJECT_SOURCE_DIR}/Game/Human.cpp ${PROJECT_SOURCE_DIR}/Game/Human.h ${PROJECT_SOURCE_DIR}/Game/Princess.cpp ${PROJECT_SOURCE_DIR}/Game/Princess.h
-        ${PROJECT_SOURCE_DIR}/Game/Magician.cpp ${PROJECT_SOURCE_DIR}/Game/Magician.h ${PROJECT_SOURCE_DIR}/Game/Monster.cpp ${PROJECT_SOURCE_DIR}/Game/Monster.h)
+set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+
+include_directories(${PROJECT_SOURCE_DIR}/library)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
+add_executable(Game main.cpp)
+target_link_libraries(Game Library)
