@@ -1,7 +1,7 @@
 #include "Magician.h"
 
 
-Magician::Magician() : Unit("Magician", 50, 1, 0, 0) {
+Magician::Magician() : Unit("Magician", 50, 5, 0, 0) {
 }
 
 const char* Magician::GetPrivilege() {

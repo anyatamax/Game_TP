@@ -9,14 +9,17 @@
 
 class ComposeUnits {
 private:
-    int gold_all = 0;
-    int level = 0;
+    int gold_ = 0;
+    int level_ = 0;
 public:
     std::vector<std::shared_ptr<Unit>> units;
     ComposeUnits(const std::string& str);
     void AddUnit(std::shared_ptr<Unit>& person);
     void RemoveUnit(std::shared_ptr<Unit>& person);
     int GetGold() const;
+    void SetGold(int gold);
+    void SetLevel(int level);
     int GetLevel() const;
     void PrintUnits();
+    bool FinishGame();
 };

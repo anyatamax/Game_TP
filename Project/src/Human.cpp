@@ -1,6 +1,6 @@
 #include "Human.h"
 
-Human::Human() : Unit("Human", 10, 1, 0, 0) {
+Human::Human() : Unit("Human", 20, 2, 0, 0) {
 }
 
 const char* Human::GetPrivilege() {
